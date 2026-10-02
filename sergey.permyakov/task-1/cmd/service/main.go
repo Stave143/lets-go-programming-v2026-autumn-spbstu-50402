@@ -5,17 +5,19 @@ import "fmt"
 func main() {
 	var frstOp int
 	_, err1 := fmt.Scan(&frstOp)
-	var scndOp int
-	_, err2 := fmt.Scan(&scndOp)
-	var operation string
-	_, err3 := fmt.Scan(&operation)
 	if err1 != nil {
 		fmt.Println("Invalid first operand")
 		return
-	} else if err2 != nil {
+	}
+	var scndOp int
+	_, err2 := fmt.Scan(&scndOp)
+	if err2 != nil {
 		fmt.Println("Invalid second operand")
 		return
-	} else if err3 != nil {
+	}
+	var operation string
+	_, err3 := fmt.Scan(&operation)
+	if err3 != nil {
 		fmt.Println("Invalid operation")
 		return
 	}
